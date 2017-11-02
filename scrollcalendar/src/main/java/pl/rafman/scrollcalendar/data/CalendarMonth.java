@@ -80,6 +80,15 @@ public class CalendarMonth implements Serializable {
         }
     }
 
+
+
+    public static CalendarMonth customStartMonth(int year,int month) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.YEAR,year);
+        calendar.set(Calendar.MONTH,month);
+        return new CalendarMonth(year, month);
+    }
+
     public static CalendarMonth now() {
         Calendar calendar = Calendar.getInstance();
         int year = calendar.get(Calendar.YEAR);

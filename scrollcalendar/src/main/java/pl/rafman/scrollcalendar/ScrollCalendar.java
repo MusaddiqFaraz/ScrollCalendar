@@ -127,6 +127,17 @@ public class ScrollCalendar extends LinearLayoutCompat implements ResProvider {
         getAdapter().setMonthScrollListener(monthScrollListener);
     }
 
+    public void setStartingMonth(int year, int month) {
+        if(year != 0)
+            getAdapter().setFirstMonthToBeDisplayed(year, month);
+        else
+            setStartingMonth();
+    }
+
+    public void setStartingMonth() {
+        getAdapter().setFirstMonthToBeDisplayed();
+    }
+
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();

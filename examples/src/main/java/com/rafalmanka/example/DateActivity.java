@@ -30,6 +30,7 @@ public class DateActivity extends AppCompatActivity {
         if (scrollCalendar == null) {
             return;
         }
+        scrollCalendar.setStartingMonth();
         scrollCalendar.setOnDateClickListener(new OnDateClickListener() {
             @Override
             public void onCalendarDayClicked(int year, int month, int day) {

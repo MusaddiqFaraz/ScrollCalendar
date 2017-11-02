@@ -38,6 +38,15 @@ public class ScrollCalendarAdapter extends RecyclerView.Adapter<MonthViewHolder>
 
     public ScrollCalendarAdapter(@NonNull ResProvider resProvider) {
         this.resProvider = resProvider;
+//        months.add(CalendarMonth.now());
+    }
+
+
+    public void setFirstMonthToBeDisplayed(int year, int month) {
+        months.add(CalendarMonth.customStartMonth(year, month));
+    }
+
+    public void setFirstMonthToBeDisplayed() {
         months.add(CalendarMonth.now());
     }
 
